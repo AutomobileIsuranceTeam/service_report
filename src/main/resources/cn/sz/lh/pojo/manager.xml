@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sz.lh.dao.IManagerDao">
+
+<select id="checklogin" parameterType="cn.sz.lh.pojo.Manager" resultType="cn.sz.lh.pojo.Manager">
+	select peopleid,h_name,h_pwd,deptid,d_rank,d_name from manager where h_name=#{h_name} and h_pwd=#{h_pwd}
+</select>
+
+
+</mapper>
