@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sz.lh.dao.IRep_InfoDao">
+
+<insert id="addreport" parameterType="cn.sz.lh.pojo.Rep_Info">
+insert into rep_info(reportid,userid,userphone,address,report_time,if_collision,if_injured,report_status)
+values(${reportid},${userid},#{userphone},#{address},#{report_time},#{if_collision},#{if_injured},#{report_status})
+</insert>
+
+<update id="updatecarpic" parameterType="cn.sz.lh.pojo.Rep_Info">
+update rep_info set accidentid=${accidentid} where reportid=${reportid}
+</update>
+
+<update id="updatepeoplepic" parameterType="cn.sz.lh.pojo.Rep_Info">
+update rep_info set injuredid=${injuredid} where reportid=${reportid}
+</update>
+
+
+
+</mapper>

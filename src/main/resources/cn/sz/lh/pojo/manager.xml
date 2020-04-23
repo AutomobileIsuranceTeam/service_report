@@ -6,6 +6,4 @@
 <select id="checklogin" parameterType="cn.sz.lh.pojo.Manager" resultType="cn.sz.lh.pojo.Manager">
 	select peopleid,h_name,h_pwd,deptid,d_rank,d_name from manager where h_name=#{h_name} and h_pwd=#{h_pwd}
 </select>
-
-
 </mapper>

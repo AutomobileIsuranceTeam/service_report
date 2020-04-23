@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sz.lh.dao.IP_InjuredDao">
+
+<insert id="addpeopleevent" parameterType="cn.sz.lh.pojo.P_Injured">
+insert into car_accident(injuredid,reportid,photo_one,photo_two,photo_three,photo_four)
+values(${injuredid},${reportid},#{photo_one},#{photo_two},#{photo_three},#{photo_four})
+</insert>
+
+
+</mapper>
